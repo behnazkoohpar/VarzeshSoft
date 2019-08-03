@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textReceptionUnit_Text"
+            style="@style/labletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="واحد استفاده شده:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/ReceptionUnit_Text"
+            style="@style/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/textReceptionUnit_Text"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textLockerNumber"
+            style="@style/labletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textReceptionUnit_Text"
+            android:layout_marginTop="10dp"
+            android:text="شماره کمد:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/LockerNumber"
+            style="@style/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textReceptionUnit_Text"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/textLockerNumber"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textInvoiceDate"
+            style="@style/labletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textReceptionUnit_Text"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/InvoiceDate"
+            android:text="تاریخ:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/InvoiceDate"
+            style="@style/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textReceptionUnit_Text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textTotalPrice"
+            style="@style/labletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textLockerNumber"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="قیمت:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/TotalPrice"
+            style="@style/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textLockerNumber"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/textTotalPrice"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textFactorNo"
+            style="@style/labletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInvoiceDate"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/FactorNo"
+            android:text="َشماره فاکتور:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/FactorNo"
+            style="@style/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInvoiceDate"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            app:customFont="fonts/IRANSans.ttf" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

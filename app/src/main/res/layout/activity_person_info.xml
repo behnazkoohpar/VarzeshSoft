@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/titr"
+        layout="@layout/titr" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/txt2"
+            style="@style/desc"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/background"
+            android:gravity="center_vertical|right"
+            android:text="شماره تماس :"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/telManager"
+            style="@style/desc"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/txt2"
+            android:background="@color/background"
+            android:gravity="center_vertical|right"
+            android:text=""
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textView2"
+            style="@style/desc"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txt2"
+            android:layout_marginTop="10dp"
+            android:background="@color/background"
+            android:gravity="center_vertical|right"
+            android:text="نام:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/first_name"
+            style="@style/desc"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/telManager"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/textView2"
+            android:background="@color/background"
+            android:gravity="center_vertical|right"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textView5"
+            style="@style/desc"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="10dp"
+            android:background="@color/background"
+            android:gravity="center_vertical|right"
+            android:text="نام خانوادگی:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/last_name"
+            style="@style/desc"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/first_name"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/textView5"
+            android:background="@color/background"
+            android:gravity="center_vertical|right"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textView6"
+            style="@style/desc"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="10dp"
+            android:background="@color/background"
+            android:gravity="center_vertical|right"
+            android:text="جنسیت:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/gender"
+            style="@style/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/last_name"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/textView6"
+            android:background="@color/background"
+            android:gravity="center_vertical|right"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomEditText
+            android:id="@+id/password"
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gender"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/my_login"
+            android:gravity="center"
+            android:hint="@string/txt_password"
+            android:imeOptions="actionNext"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="@dimen/top_margin"
+            android:singleLine="true"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomEditText
+            android:id="@+id/confirmPass"
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/my_login"
+            android:gravity="center"
+            android:hint="@string/txt_re_password"
+            android:imeOptions="actionDone"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="@dimen/top_margin"
+            android:singleLine="true"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <Button
+            android:id="@+id/btnOk"
+            style="@style/button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmPass"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/my_button"
+            android:text="@string/txt_ok" />
+
+    </RelativeLayout>
+</LinearLayout>

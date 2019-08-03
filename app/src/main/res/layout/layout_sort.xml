@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titr"
+        layout="@layout/titr" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp">
+
+        <RadioButton
+            android:id="@+id/numUnitRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="true" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/numUnitRadio"
+            android:text="@string/base_expired_date"
+            android:textSize="@dimen/font_size_normal"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/ascUnitNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/Asc"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/font_size_extra_small"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ascUnitNumber"
+            android:enabled="true" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/switch1"
+            android:text="@string/des"
+            android:textSize="@dimen/font_size_extra_small"
+            app:customFont="fonts/IRANSans.ttf" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+        <RadioButton
+            android:id="@+id/metrajUnitRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/metrajUnitRadio"
+            android:text="دفعات باقی مانده"
+            android:textSize="@dimen/font_size_normal"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/ascUnitMetraj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/Asc"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/font_size_extra_small"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ascUnitMetraj"
+            android:enabled="false" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/customTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/switch2"
+            android:text="@string/des"
+            android:textSize="@dimen/font_size_extra_small"
+            app:customFont="fonts/IRANSans.ttf" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+        <RadioButton
+            android:id="@+id/roleUnitRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/roleUnitRadio"
+            android:text="دفعات استفاده شده"
+            android:textSize="@dimen/font_size_normal"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/ascUnitRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="@string/Asc"
+            android:textSize="@dimen/font_size_extra_small"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/ascUnitRole"
+            android:enabled="false" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/switch3"
+            android:text="@string/des"
+            android:textSize="@dimen/font_size_extra_small"
+            app:customFont="fonts/IRANSans.ttf" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSort"
+        style="@style/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/my_button"
+        android:text="@string/txt_Sort" />
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_common_large">
+
+
+    <com.koohpar.eram.custom.CustomTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_common_large"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color_black_38"
+        android:textSize="@dimen/font_size_xxlarge"
+        app:customFont="@string/font_aurulent_sans_bold" />
+
+
+    <com.koohpar.eram.custom.CustomTextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_common"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color_black_38"
+        android:textSize="@dimen/font_size_large"
+        app:customFont="@string/font_aurulent_sans_regular" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/loginBottomMargin"
+        android:layout_marginRight="@dimen/loginBottomMargin"
+        android:layout_marginTop="@dimen/padding_common_15"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tv_ok"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/my_button"
+            android:gravity="center"
+            android:text="@string/txt_login" />
+
+        <Button
+            android:id="@+id/tv_cancel"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/my_button"
+            android:gravity="center"
+            android:text="@string/txt_login" />
+
+    </LinearLayout>
+
+</LinearLayout>

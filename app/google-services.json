@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "65541780830",
+    "firebase_url": "https://eram-1b5d7.firebaseio.com",
+    "project_id": "eram-1b5d7",
+    "storage_bucket": "eram-1b5d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65541780830:android:fcfdc0fc35813d94",
+        "android_client_info": {
+          "package_name": "com.koohpar.eram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65541780830-qh677pbpr26554qa6ail2lb2lg2n2ci9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.koohpar.eram",
+            "certificate_hash": "815e4c504697c3f2773c6c8573730347048a3479"
+          }
+        },
+        {
+          "client_id": "65541780830-k8hbpgdjqpm6o2m3e7iead2fitlfief9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpjOSOwMSpz5_R8n7IHoSjoaRchMYkP_A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65541780830-k8hbpgdjqpm6o2m3e7iead2fitlfief9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

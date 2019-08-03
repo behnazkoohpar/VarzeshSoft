@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/titrProfile"
+        layout="@layout/titr" />
+
+    <ImageView
+        android:id="@+id/imaMessage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/titrProfile"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_message" />
+
+    <com.koohpar.eram.custom.CustomTextView
+        android:id="@+id/txtState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titrProfile"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@+id/imaMessage"
+        android:gravity="center_vertical"
+        android:text="@string/txt_type_message"
+        android:textSize="12dp"
+        app:customFont="fonts/IRANSans.ttf" />
+
+    <LinearLayout
+        android:id="@+id/messageLinear"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/txtState"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/background"
+        android:divider="@color/colorPrimaryDark"
+        android:outlineProvider="bounds">
+
+        <RelativeLayout
+            android:id="@+id/messageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/my_text"
+            android:clickable="true"
+            android:elevation="4dp">
+
+            <ImageButton
+                android:id="@+id/btn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_keyboard_arrow_down" />
+
+            <ImageButton
+                android:id="@+id/btn2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_keyboard_arrow_up"
+                android:visibility="invisible" />
+
+            <com.koohpar.eram.custom.CustomTextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:customFont="fonts/IRANSans.ttf" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/expandableLayoutMessage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/messageLinear"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        app:ael_duration="400"
+        app:ael_expanded="false"
+        app:ael_interpolator="accelerate"
+        app:ael_orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:elevation="2dp"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/listMessage"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:choiceMode="singleChoice"
+                android:divider="#FF0033"
+                android:dividerHeight="1dp"
+                android:headerDividersEnabled="true"
+                android:listSelector="#d8ddfb" />
+        </RelativeLayout>
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+    <ImageView
+        android:id="@+id/imaText"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/expandableLayoutMessage"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_message" />
+
+    <com.koohpar.eram.custom.CustomTextView
+        android:id="@+id/txtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expandableLayoutMessage"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@+id/imaMessage"
+        android:gravity="center_vertical"
+        android:text="@string/txt_message"
+        android:textSize="12dp"
+        app:customFont="fonts/IRANSans.ttf" />
+
+    <com.koohpar.eram.custom.CustomEditText
+        android:id="@+id/text_me"
+        style="@style/desc"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txtText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:padding="@dimen/padding_common"
+        android:background="@drawable/my_login"
+        android:maxLength="500"
+        android:maxLines="5"
+        app:customFont="fonts/IRANSans.ttf" />
+
+    <Button
+        android:id="@+id/btnOk"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_me"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/layoutMoreMargin"
+        android:background="@drawable/my_button"
+        android:text="@string/txt_ok" />
+
+</RelativeLayout>

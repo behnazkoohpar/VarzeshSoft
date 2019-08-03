@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.koohpar.eram.activities.ListDetailOrderActivity">
+
+
+    <include
+        android:id="@+id/titr"
+        layout="@layout/titr"></include>
+
+    <LinearLayout
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titr"
+        android:orientation="vertical">
+
+        <com.koohpar.eram.custom.CustomTextView
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="تنظیمات مربوط به نمایش لیست سرویس های من"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="وضعیت هشدار در صورتی که:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/check_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+
+            <com.koohpar.eram.custom.CustomTextView
+                android:id="@+id/txt"
+                style="@style/lable_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/check_number"
+                android:layout_weight="1"
+                android:text="کمتر از "
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <com.koohpar.eram.custom.CustomEditText
+                android:id="@+id/number"
+                style="@style/lable_small"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txt"
+                android:layout_weight="1"
+                android:background="@drawable/my_text"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="@dimen/padding_common_small"
+                android:text="10"
+                android:textAlignment="center"
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <com.koohpar.eram.custom.CustomTextView
+                style="@style/lable_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/number"
+                android:layout_weight="1"
+                android:text="مرتبه از سرویس های من باقی مانده باشد."
+                app:customFont="fonts/IRANSans.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <CheckBox
+                android:id="@+id/check_sharj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+
+            <com.koohpar.eram.custom.CustomTextView
+                android:id="@+id/txt2"
+                style="@style/lable_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/check_sharj"
+                android:layout_weight="1"
+                android:text="کمتر از "
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <com.koohpar.eram.custom.CustomEditText
+                android:id="@+id/sharj"
+                style="@style/lable_small"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txt2"
+                android:layout_weight="1"
+                android:background="@drawable/my_text"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="@dimen/padding_common_small"
+                android:text="5000000"
+                android:textAlignment="center"
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <com.koohpar.eram.custom.CustomTextView
+                style="@style/lable_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/sharj"
+                android:layout_weight="1"
+                android:text="ریال از شارژ من باقی مانده باشد."
+                app:customFont="fonts/IRANSans.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <CheckBox
+                android:id="@+id/check_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+
+            <com.koohpar.eram.custom.CustomTextView
+                android:id="@+id/txt3"
+                style="@style/lable_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/check_day"
+                android:layout_weight="1"
+                android:text="کمتر از "
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <com.koohpar.eram.custom.CustomEditText
+                android:id="@+id/day"
+                style="@style/lable_small"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txt3"
+                android:layout_weight="1"
+                android:background="@drawable/my_text"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:padding="@dimen/padding_common_small"
+                android:text="30"
+                android:textAlignment="center"
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <com.koohpar.eram.custom.CustomTextView
+                style="@style/lable_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/day"
+                android:layout_weight="1"
+                android:text="روز به پایان سرویس من باقی مانده باشد."
+                app:customFont="fonts/IRANSans.ttf" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/my_button"
+        android:text="ثبت" />
+</RelativeLayout>

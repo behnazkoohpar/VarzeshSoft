@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textUseDate"
+            style="@style/labletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="تاریخ استفاده از سرویس:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/useDate"
+            style="@style/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/textUseDate"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/useNumberText"
+            style="@style/labletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textUseDate"
+            android:layout_marginTop="10dp"
+            android:text="مرتبه استفاده:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/useNumber"
+            style="@style/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textUseDate"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/useNumberText"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textRemainNumber"
+            style="@style/labletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/useNumberText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="تعداد دفعات باقی مانده:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/remainNumber"
+            style="@style/lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/useNumberText"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/textRemainNumber"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/organizationName"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/remainNumber"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="left"
+            android:textColor="@color/green_600"
+            app:customFont="fonts/IRANSans.ttf" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

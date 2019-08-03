@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.koohpar.eram">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.WRITE_EXTERNAL_STORAGE"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.READ_EXTERNAL_STORAGE"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.DecraseFromChargeActivity"></activity>
+        <activity android:name=".activities.ListReserveActivity" />
+        <activity android:name=".activities.RequestActivity" />
+        <activity android:name=".activities.TransactionActivity" />
+        <activity android:name=".activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.RecieveSmsCodeActivity" />
+        <activity android:name=".activities.EnterMobileActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.ForgetPasswordActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.koohpar.eram.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver
+            android:name=".tools.SmsListener"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service android:name=".firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activities.SignInActivity" />
+        <activity android:name=".activities.RcieveSmsActivity" />
+        <activity android:name=".activities.PersonInfoActivity" />
+        <activity android:name=".activities.ListOrderActivity" />
+        <activity android:name=".activities.ListDetailOrderActivity" />
+        <activity android:name=".activities.ListDetailCreditOrderActivity" />
+        <activity android:name=".activities.SettingActivity" />
+        <activity android:name=".activities.AboutActivity" />
+        <activity android:name=".activities.RateActivity" />
+        <activity android:name=".activities.ListFactorActivity" />
+        <activity android:name=".activities.ListTransactionActivity" />
+        <activity android:name=".activities.ListMessageActivity" />
+        <activity android:name=".activities.SendMessageActivity" />
+        <activity android:name=".activities.BarcodeActivity" />
+        <activity android:name=".activities.ListDetailFactorActivity" />
+        <activity android:name=".activities.GuestActivity" />
+        <activity android:name=".activities.ChartActivity" />
+        <activity android:name=".activities.MembershipFileCard" />
+        <activity android:name=".activities.CashServiceActivity" />
+    </application>
+
+</manifest>

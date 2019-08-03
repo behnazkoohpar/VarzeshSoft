@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ChartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/blue_50">
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textmony"
+            style="@style/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/list_mony"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textmony"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/padding_common" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textChart"
+            style="@style/desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textmony"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/padding_common"
+            android:text="@string/no_credit"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:customFont="fonts/IRANSans.ttf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="@color/blue_50">
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textcredit"
+            style="@style/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/list_credit"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textcredit"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/padding_common" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/textChart1"
+            style="@style/desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textcredit"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/padding_common"
+            android:text="@string/no_credit"
+            android:visibility="gone"
+            android:textAlignment="center"
+            app:customFont="fonts/IRANSans.ttf" />
+
+
+    </RelativeLayout>
+</LinearLayout>

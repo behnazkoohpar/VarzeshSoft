@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RequestActivity">
+
+    <include
+        android:id="@+id/titrProfile"
+        layout="@layout/titr" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titrProfile"
+        android:background="@drawable/bkrequest">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ccffffff"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ccffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/blue_300">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/blue_grey_900">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:background="@color/color_white">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="140dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/bkbuy">
+
+                                    <RelativeLayout
+                                        android:id="@+id/salel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="140dp"
+                                        android:background="#ccDBD6C4">
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            android:id="@+id/txtsale"
+                                            style="@style/lable3"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginTop="@dimen/margin_main"
+                                            android:layout_marginRight="@dimen/margin_main"
+                                            android:text="@string/sale"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            android:id="@+id/txtDesc"
+                                            style="@style/labletext"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/txtsale"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="@dimen/margin_small"
+                                            android:layout_marginRight="20dp"
+                                            android:text="@string/txtloyalty"
+                                            android:textColor="#003799"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            android:id="@+id/txtDesc1"
+                                            style="@style/labletext"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/txtDesc"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="@dimen/margin_small"
+                                            android:layout_marginRight="20dp"
+                                            android:text="@string/txtdesc"
+                                            android:textColor="#E0046B"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/blue_300">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/blue_grey_900">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:background="@color/color_white">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="140dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/masag">
+
+                                    <RelativeLayout
+                                        android:id="@+id/reservel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="140dp"
+                                        android:background="#ccDBD6C4">
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            android:id="@+id/txtname2"
+                                            style="@style/lable3"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginTop="@dimen/margin_main"
+                                            android:layout_marginRight="@dimen/margin_main"
+                                            android:text="@string/reserve"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            android:id="@+id/txtDesc2"
+                                            style="@style/labletext"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/txtname2"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="@dimen/margin_small"
+                                            android:layout_marginRight="20dp"
+                                            android:text="@string/reserveTxt"
+                                            android:textColor="#003799"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            style="@style/labletext"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/txtDesc2"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="@dimen/margin_small"
+                                            android:layout_marginRight="20dp"
+                                            android:text="@string/txtdesc"
+                                            android:textColor="#E0046B"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/blue_300">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/blue_grey_900">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:background="@color/color_white">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@drawable/prog">
+
+                                    <RelativeLayout
+                                        android:id="@+id/progl"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="160dp"
+                                        android:background="#ccDBD6C4">
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            android:id="@+id/txtname3"
+                                            style="@style/lable3"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginTop="@dimen/margin_main"
+                                            android:layout_marginRight="@dimen/margin_main"
+                                            android:text="@string/program"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            android:id="@+id/txtDesc3"
+                                            style="@style/labletext"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/txtname3"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="@dimen/margin_small"
+                                            android:layout_marginRight="20dp"
+                                            android:text="@string/txtProgram"
+                                            android:textColor="#003799"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+
+                                        <com.koohpar.eram.custom.CustomTextView
+                                            style="@style/labletext"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/txtDesc3"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginTop="@dimen/margin_small"
+                                            android:layout_marginRight="20dp"
+                                            android:text="@string/txtdesc"
+                                            android:textColor="#E0046B"
+                                            android:textSize="@dimen/font_size_normal"
+                                            app:customFont="fonts/IRANSans.ttf" />
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

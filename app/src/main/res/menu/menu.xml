@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu"
+    android:background="@color/light_blue_900">
+
+    <item
+        android:id="@+id/nav_sms"
+        android:icon="@drawable/ic_service"
+        android:title="@string/list_service" />
+    <item
+        android:id="@+id/nav_request"
+        android:icon="@drawable/ic_request"
+        android:title="@string/request" />
+    <item
+        android:id="@+id/nav_cash"
+        android:icon="@drawable/ic_monetization"
+        android:title="@string/mali" />
+
+    <item
+        android:id="@+id/nav_market"
+        android:icon="@drawable/ic_add_shop"
+        android:title="@string/txt_menu_service"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/settings"
+        android:title="@string/txt_menu_setting" />
+    <!--<item-->
+    <!--android:id="@+id/nav_rate"-->
+    <!--android:icon="@drawable/settings"-->
+    <!--android:title="@string/txt_menu_rate" />-->
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_about"
+        android:title="@string/txt_menu_about_me" />
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_exit"
+        android:title="@string/txt_menu_exit" />
+
+</menu>

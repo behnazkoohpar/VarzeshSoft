@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.koohpar.eram.activities.RateActivity">
+
+
+    <include
+        android:id="@+id/titr"
+        layout="@layout/titr"></include>
+
+    <LinearLayout
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titr"
+        android:orientation="vertical">
+
+        <com.koohpar.eram.custom.CustomTextView
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="کاربر عزیز،"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/thanks"
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"/>
+
+        <com.koohpar.eram.custom.CustomTextView
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="میزان رضایت از برخورد پرسنل:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <RatingBar
+            android:id="@+id/personelRate"
+            android:scaleX=".8"
+            android:scaleY=".8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="میزان رضایت از محیط مجموعه:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <RatingBar
+            android:id="@+id/rate"
+            android:scaleX=".8"
+            android:scaleY=".8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <com.koohpar.eram.custom.CustomTextView
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="توضیحات بیشتر:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomEditText
+            android:id="@+id/desc"
+            style="@style/desc"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_text"
+            android:maxHeight="100dp"
+            android:maxLength="250"
+            android:maxLines="3"
+            app:fontFamily="fonts/IRANSans.ttf" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/my_button"
+        android:text="ثبت" />
+</RelativeLayout>

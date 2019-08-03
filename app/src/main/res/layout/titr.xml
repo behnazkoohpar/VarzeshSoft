@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/titrProfile"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:background="@color/background"
+    android:elevation="16dp"
+    android:orientation="horizontal"
+    android:textAlignment="center">
+
+    <com.koohpar.eram.custom.CustomTextView
+        android:id="@+id/textView4"
+        style="@style/titr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="ساختمان"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/font_size_larg"
+        app:customFont="fonts/IRANSans.ttf" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_back" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary" />
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundPage"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/titrProfile"
+        layout="@layout/titr" />
+
+    <com.koohpar.eram.custom.CustomTextView
+        android:id="@+id/txtDesc"
+        style="@style/desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_code_recieve"
+        android:textSize="@dimen/font_size_larg"
+        app:customFont="fonts/IRANSans.ttf" />
+
+    <com.koohpar.eram.custom.CustomEditText
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/my_text"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:hint="@string/txt_sms_code"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textSize="@dimen/font_size_larg"
+        android:maxLength="11"
+        app:customFont="fonts/IRANSans.ttf" />
+
+    <Button
+        android:id="@+id/btnOk"
+        style="@style/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/my_button"
+        android:text="@string/txt_ok"
+        android:textSize="@dimen/font_size_larg" />
+    <LinearLayout
+        android:id="@+id/smsNotRecieve"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/txtNotRecieveCode"
+            style="@style/link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/txt_dont_recieve_code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_size_larg"
+            app:customFont="fonts/IRANSans.ttf"/>
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/txtCallCenter"
+            style="@style/link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/txt_call_center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_size_larg"
+            app:customFont="fonts/IRANSans.ttf" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/smsTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/timerText"
+            style="@style/desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/font_size_large30"
+            app:customFont="fonts/IRANSans.ttf" />
+
+    </RelativeLayout>
+
+</LinearLayout>

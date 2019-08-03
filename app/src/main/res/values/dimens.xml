@@ -1,0 +1,194 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="font_size_larg">15sp</dimen>
+    <dimen name="font_size_xlarg">18sp</dimen>
+    <dimen name="font_size_xxlarg">20sp</dimen>
+    <dimen name="design_navigation_padding_top_default" tools:override="true">0dp</dimen>
+    <dimen name="design_navigation_separator_vertical_padding" tools:override="true">0dp</dimen>
+    <dimen name="design_navigation_padding_bottom" tools:override="true">0dp</dimen>
+
+    <dimen name="margin_main">12dp</dimen>
+    <dimen name="edttext_padding">10dp</dimen>
+    <dimen name="margintop_space">14dp</dimen>
+    <dimen name="tv_text_size">15sp</dimen>
+    <dimen name="profile_picture_width">52dp</dimen>
+    <dimen name="profile_picture_height">52dp</dimen>
+    <dimen name="left_margin_profile_button">15dp</dimen>
+    <dimen name="login_margin_top">20dp</dimen>
+    <dimen name="login_margin_bottom">15dp</dimen>
+    <dimen name="forgot_tv_textsize">14sp</dimen>
+    <dimen name="padding_reset_password">25dp</dimen>
+    <dimen name="reset_password_screen_padding">15dp</dimen>
+    <dimen name="progress_bar_splash">60dp</dimen>
+    <dimen name="border_cover">80dp</dimen>
+
+    <!--place project dimensions here-->
+    <dimen name="mini_margin">5dp</dimen>
+    <dimen name="top_margin">7dp</dimen>
+    <dimen name="default_margin">10dp</dimen>
+    <dimen name="big_margin">10dp</dimen>
+    <dimen name="layoutMargin">14dp</dimen>
+    <dimen name="layoutMoreMargin">20dp</dimen>
+    <dimen name="loginBottomMargin">30dp</dimen>
+    <dimen name="layoutMaxMargin">40dp</dimen>
+
+    <!-- view specific size-->
+    <dimen name="login_top_margin">30dp</dimen>
+    <dimen name="signup_top_margin">10dp</dimen>
+    <dimen name="profile_picture_size">100dp</dimen>
+    <dimen name="edit_profile_picture_size">160dp</dimen>
+    <dimen name="navigation_view_header_size">190dp</dimen>
+    <dimen name="rating_passenger_picture_size">80dp</dimen>
+
+    <!-- Font size -->
+    <dimen name="font_size_extra_small">8sp</dimen>
+    <dimen name="font_size_small">10sp</dimen>
+    <dimen name="font_size_small_extra">11sp</dimen>
+    <dimen name="font_size_normal">12sp</dimen>
+    <dimen name="font_size_edit_text">13sp</dimen>
+    <dimen name="font_size_large">14sp</dimen>
+    <dimen name="font_size_xlarge">16sp</dimen>
+    <dimen name="font_size_xxlarge">18sp</dimen>
+    <dimen name="font_size_xxxlarge">20sp</dimen>
+    <dimen name="font_size_large22">22sp</dimen>
+    <dimen name="font_size_large24">24sp</dimen>
+    <dimen name="font_header">25dp</dimen>
+    <dimen name="font_size_large28">28sp</dimen>
+    <dimen name="font_size_large30">30sp</dimen>
+    <dimen name="font_size_large32">32sp</dimen>
+    <dimen name="font_size_large34">34sp</dimen>
+    <dimen name="font_size_large40">40sp</dimen>
+    <dimen name="item_scroll_height">60dp</dimen>
+    <dimen name="font_size_large80">80sp</dimen>
+
+    <!--Dimensions and values for circle page indicator -->
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_line_indicator_line_width">12dp</dimen>
+    <dimen name="default_line_indicator_gap_width">4dp</dimen>
+    <dimen name="default_line_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_title_indicator_footer_indicator_height">4dp</dimen>
+    <dimen name="default_title_indicator_footer_indicator_underline_padding">20dp</dimen>
+    <dimen name="default_title_indicator_footer_padding">7dp</dimen>
+    <dimen name="default_title_indicator_text_size">15dp</dimen>
+    <dimen name="default_title_indicator_title_padding">5dp</dimen>
+    <dimen name="default_title_indicator_top_padding">7dp</dimen>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="default_title_indicator_clip_padding">4dp</dimen>
+    <dimen name="default_title_indicator_footer_line_height">2dp</dimen>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <integer name="default_title_indicator_footer_indicator_style">2</integer>
+    <integer name="default_title_indicator_line_position">0</integer>
+    <integer name="default_underline_indicator_fade_delay">300</integer>
+    <integer name="default_underline_indicator_fade_length">400</integer>
+    <bool name="default_circle_indicator_centered">true</bool>
+    <bool name="default_line_indicator_centered">true</bool>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <bool name="default_title_indicator_selected_bold">true</bool>
+    <bool name="default_underline_indicator_fades">true</bool>
+    <!--Dimensions and values for circle page indicator -->
+
+    <!-- layout dimension -->
+    <dimen name="padding_common">10dp</dimen>
+    <dimen name="padding_common_15">15dp</dimen>
+    <dimen name="padding_common_12">12dp</dimen>
+    <dimen name="padding_common_large">20dp</dimen>
+    <dimen name="padding_common_small">5dp</dimen>
+    <dimen name="padding_feedback_edit_text">4dp</dimen>
+    <dimen name="padding_common_extra_small">2dp</dimen>
+    <dimen name="padding_common_extra_large">30dp</dimen>
+    <dimen name="padding_common_xx_large">40dp</dimen>
+    <dimen name="padding_common_xxx_large">50dp</dimen>
+    <dimen name="padding_left">10dp</dimen>
+    <dimen name="padding_top">10dp</dimen>
+    <dimen name="padding_right">10dp</dimen>
+    <dimen name="padding_bottom">10dp</dimen>
+    <dimen name="padding_left_small">5dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="padding_top_small">5dp</dimen>
+    <dimen name="padding_right_small">5dp</dimen>
+    <dimen name="padding_bottom_small">5dp</dimen>
+    <dimen name="textsize_settings">17sp</dimen>
+    <dimen name="list_item_padding">14dp</dimen>
+    <dimen name="textsize_personal_profile">15sp</dimen>
+    <dimen name="textsize_edittext_personal_profile">17sp</dimen>
+    <dimen name="textsize_button_personal_profile">17sp</dimen>
+    <dimen name="padding_button_personal_profile">7dp</dimen>
+    <dimen name="padding_textview_settings_left">10dp</dimen>
+    <dimen name="padding_textview_settings_right">5dp</dimen>
+    <dimen name="padding_textview_settings_bottom">10dp</dimen>
+    <dimen name="padding_textview_settings_top">10dp</dimen>
+    <dimen name="padding_layout">10dp</dimen>
+    <dimen name="size_imageview_personalprofile">120dp</dimen>
+    <dimen name="border_width">0.5dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="line_spacing">4sp</dimen>
+    <dimen name="margin_feedback_edittext">35dp</dimen>
+    <dimen name="feedback_massagebox_height">80dp</dimen>
+    <dimen name="padding_layout_about">5dp</dimen>
+    <dimen name="textsize_textview_about">15sp</dimen>
+    <dimen name="textsize_list_item">15sp</dimen>
+    <dimen name="padding_textview_about">10dp</dimen>
+    <dimen name="halloCabTopPadding">8dp</dimen>
+    <dimen name="dealLayoutWidth">200dp</dimen>
+    <dimen name="grid_spacing">10dp</dimen>
+    <dimen name="row_location_height">100dp</dimen>
+    <dimen name="img_truck_width">67dp</dimen>
+    <dimen name="truck_img_margin">20dp</dimen>
+    <dimen name="truck_name_margin_top">22dp</dimen>
+    <dimen name="rating_margin_top">3dp</dimen>
+    <dimen name="rating_dollar_space">5dp</dimen>
+    <dimen name="tag_margin_left">67dp</dimen>
+    <dimen name="tag_margin_top">23dp</dimen>
+    <dimen name="red_dot_width">12dp</dimen>
+    <dimen name="dot_margin_right">12dp</dimen>
+    <dimen name="dot_margin_top">58dp</dimen>
+    <dimen name="header_padding">14dp</dimen>
+    <dimen name="scroll_view_bottom">20dp</dimen>
+    <dimen name="order_layout_padding">16dp</dimen>
+
+    <!--frag_deal -->
+    <dimen name="frag_deal_menu_header_image_size">180dp</dimen>
+    <dimen name="frag_deal_menulist_img_width">62dp</dimen>
+    <dimen name="frag_deal_menulist_name_size">15sp</dimen>
+    <dimen name="frag_checkout_img_size">68dp</dimen>
+    <dimen name="create_profile_picture_width">100dp</dimen>
+    <dimen name="create_profile_picture_height">100dp</dimen>
+    <dimen name="page_indicator_margin_bottom">10dp</dimen>
+
+    <!-- For thannku screen-->
+    <dimen name="thanku_title">24sp</dimen>
+    <dimen name="thanku_note">16sp</dimen>
+    <dimen name="thanku_truck_name">20sp</dimen>
+    <dimen name="thanku_order_number">94sp</dimen>
+    <dimen name="thanku_confirm_number">14sp</dimen>
+    <dimen name="thanku_time">34sp</dimen>
+    <dimen name="thanku_user_size">90sp</dimen>
+
+    <!-- value list item-->
+    <dimen name="inflate_value_list_item_line_space">2dp</dimen>
+    <dimen name="inflate_value_list_item_word_padding">4dp</dimen>
+    <dimen name="inflate_value_list_item_line_separator_height">12dp</dimen>
+    <dimen name="inflate_value_list_item_line_separator_width">1dp</dimen>
+    <dimen name="line_separation_2">2dp</dimen>
+    <dimen name="line_separation_3">3dp</dimen>
+    <dimen name="alert_pasw_reset_dialog_height">550dp</dimen>
+    <dimen name="alert_pasw_reset_dialog_width">350dp</dimen>
+    <dimen name="share_popup_et_height">270dp</dimen>
+    <dimen name="invite_close_btn_top_margin">100dp</dimen>
+    <dimen name="wheelview_height">170dp</dimen>
+    <integer name="border_width">5</integer>
+    <integer name="verificationCodeLength">10</integer>
+
+
+    <!--Prom code Dialog-->
+    <dimen name="promoDialogWidth">300dp</dimen>
+    <dimen name="moreBorderRadious">11dp</dimen>
+    <dimen name="btnRideNowPadding">130dp</dimen>
+
+    <dimen name="location_icon_top_padding">1dp</dimen>
+    <dimen name="text_height">40dp</dimen>
+
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg_top"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_common_large">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/rounded_bg_top"
+            android:elevation="16dp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <com.koohpar.eram.custom.CustomTextView
+                android:id="@+id/txtDialogTitle"
+                style="@style/titr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font_size_larg"
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary" />
+        </RelativeLayout>
+
+
+
+        <!--<com.koohpar.eram.custom.CustomTextView-->
+            <!--android:id="@+id/"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/padding_common"-->
+            <!--android:layout_marginLeft="@dimen/padding_common_15"-->
+            <!--android:layout_marginRight="@dimen/padding_common_15"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/congratulations"-->
+            <!--android:textColor="@color/color_black_38"-->
+            <!--android:textSize="@dimen/font_size_xxlarge"-->
+            <!--android:visibility="gone"-->
+            <!--app:customFont="fonts/IRANSans.ttf" />-->
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/txtDialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="20"
+            android:gravity="center"
+            android:text="1234"
+            android:textColor="@color/color_black_38"
+            android:textSize="@dimen/font_size_large"
+            app:customFont="fonts/IRANSans.ttf"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_common_small"
+            android:layout_marginRight="@dimen/padding_common_small"
+            android:layout_marginTop="@dimen/padding_common_large"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnVerify"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/my_button"
+                android:text="@string/pop_up_ok"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/my_button"
+                android:text="@string/pop_up_ok"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

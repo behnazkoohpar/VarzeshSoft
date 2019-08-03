@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.koohpar.eram.activities.GuestActivity">
+
+    <include
+        android:id="@+id/titr"
+        layout="@layout/titr"></include>
+
+    <LinearLayout
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titr"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.koohpar.eram.custom.CustomTextView
+                android:id="@+id/txt_servicename"
+                style="@style/lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="سرویس مورد استفاده: "
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <com.koohpar.eram.custom.CustomTextView
+                android:id="@+id/serviceName"
+                style="@style/lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/txt_servicename"
+                app:customFont="fonts/IRANSans.ttf" />
+        </RelativeLayout>
+
+        <com.koohpar.eram.custom.CustomTextView
+            style="@style/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="شماره تلفن همراه میهمان:"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <com.koohpar.eram.custom.CustomEditText
+            android:id="@+id/telNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_login"
+            android:gravity="center"
+            android:hint="09123456789"
+            android:textAlignment="center"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/blue_50"
+            android:orientation="vertical">
+
+            <com.koohpar.eram.custom.CustomTextView
+                style="@style/lable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="َشرایط استفاده از سرویس برای میهمان:"
+                app:customFont="fonts/IRANSans.ttf" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+
+                <com.koohpar.eram.custom.CustomTextView
+                    android:id="@+id/txt"
+                    style="@style/lable_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:text="تعداد افراد مجاز همراه میهمان:  "
+                    app:customFont="fonts/IRANSans.ttf" />
+
+                <com.koohpar.eram.custom.CustomEditText
+                    android:id="@+id/user"
+                    style="@style/lable_small"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/txt"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_text"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="@dimen/padding_common_small"
+                    android:text="1"
+                    android:textAlignment="center"
+                    app:customFont="fonts/IRANSans.ttf" />
+
+                <com.koohpar.eram.custom.CustomTextView
+                    style="@style/lable_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/user"
+                    android:layout_weight="1"
+                    android:text="نفر"
+                    app:customFont="fonts/IRANSans.ttf" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+
+                <com.koohpar.eram.custom.CustomTextView
+                    android:id="@+id/txt2"
+                    style="@style/lable_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:text="مدت اعتبار استفاده میهمان تا: "
+                    app:customFont="fonts/IRANSans.ttf" />
+
+                <com.koohpar.eram.custom.CustomEditText
+                    android:id="@+id/day"
+                    style="@style/lable_small"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/txt2"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_text"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:padding="@dimen/padding_common_small"
+                    android:text="1"
+                    android:textAlignment="center"
+                    app:customFont="fonts/IRANSans.ttf" />
+
+                <com.koohpar.eram.custom.CustomTextView
+                    style="@style/lable_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/day"
+                    android:layout_weight="1"
+                    android:text="روز آینده"
+                    app:customFont="fonts/IRANSans.ttf" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/blue_200">
+
+                <CheckBox
+                    android:id="@+id/check_guest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp" />
+
+                <com.koohpar.eram.custom.CustomTextView
+                    android:id="@+id/txt_guest"
+                    style="@style/lable_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/check_guest"
+                    android:layout_weight="1"
+                    android:text="بابت خدمات استفاده شده در مجموعه توسط مهمان از اعتبار سرویس کسر گردد. "
+                    app:customFont="fonts/IRANSans.ttf" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/my_button"
+        android:text="ثبت" />
+
+</RelativeLayout>

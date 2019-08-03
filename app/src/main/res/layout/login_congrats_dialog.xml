@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/rounded_bg_top"
+        android:elevation="16dp"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <com.koohpar.eram.custom.CustomTextView
+            android:id="@+id/txtDialogTitle"
+            style="@style/titr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font_size_larg"
+            app:customFont="fonts/IRANSans.ttf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <com.koohpar.eram.custom.CustomTextView
+        android:id="@+id/txtDialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="20"
+        android:gravity="center"
+        android:padding="@dimen/padding_common_small"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/color_black_38"
+        android:textSize="@dimen/font_size_large"
+        app:customFont="fonts/IRANSans.ttf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/loginBottomMargin"
+        android:layout_marginRight="@dimen/loginBottomMargin"
+        android:layout_marginTop="@dimen/padding_common_15"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_common_large">
+
+        <Button
+            android:id="@+id/btnLoginOK"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/my_button"
+            android:text="@string/pop_up_ok" />
+    </LinearLayout>
+
+
+</LinearLayout>
