@@ -1,5 +1,6 @@
 package com.koohpar.eram.firebase;
 
+import android.annotation.SuppressLint;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,6 +10,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.PowerManager;
+
 import androidx.core.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -27,7 +29,7 @@ import me.leolin.shortcutbadger.ShortcutBadger;
  */
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
-    public static int badgeCount=0;
+    public static int badgeCount = 0;
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -38,8 +40,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Context context = getBaseContext();
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         if (!pm.isScreenOn()) {
+            @SuppressLint("InvalidWakeLockTag")
             PowerManager.WakeLock w1 = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.ON_AFTER_RELEASE, "MyLock");
             w1.acquire(10000);
+            @SuppressLint("InvalidWakeLockTag")
             PowerManager.WakeLock wl_cpu = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MyCpuLock");
             wl_cpu.acquire(10000);
         }
@@ -89,7 +93,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         NotificationManager mNotificationManager = (NotificationManager) context
                 .getSystemService(Context.NOTIFICATION_SERVICE);
         if (type.equalsIgnoreCase("3")) {
-            badgeCount ++;
+            badgeCount++;
             ShortcutBadger.applyCount(context, badgeCount); //for 1.1.4+
             mNotificationManager.notify(notificationId, mBuilder.build());
             return;

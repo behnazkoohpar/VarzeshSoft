@@ -207,8 +207,6 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
                                 listState.setAdapter(arrayAdapterState);
                                 expandableLayoutMessage.toggle();
                             }
-
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -221,7 +219,6 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
                     }
                 }
         );
-
 // add it to the RequestQueue
         requestQueue.add(getRequest);
     }
@@ -288,7 +285,7 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_LOGIN_VARZESH_SOFT, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(AppConstants.SERVER_IP + URL_LOGIN_VARZESH_SOFT, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -300,7 +297,6 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
             e.printStackTrace();
         }
     }
-
 
     private boolean validate() {
         if(state.getText().toString().isEmpty()){
@@ -342,7 +338,7 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_SEND_TOKEN_WITH_DEVICE_TYPE, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SEND_TOKEN_WITH_DEVICE_TYPE, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

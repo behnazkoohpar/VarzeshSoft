@@ -12,9 +12,11 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
+
 import com.koohpar.eram.R;
 
 import java.io.File;
@@ -42,13 +44,13 @@ import com.koohpar.eram.tools.CommonMethods;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class SplashActivity extends AppCompatActivity implements IAPIConstantants,IApiUrls {
+public class SplashActivity extends AppCompatActivity implements IAPIConstantants, IApiUrls {
 
     private Handler mHandler;
     private final int mInterval = 5000;
     private ProgressDialog dialogBar;
     private ProgressDialog prgDialog;
-    private boolean stoped=false;
+    private boolean stoped = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
         prgDialog.setMessage("لطفا منتظر بمانید ...");
         prgDialog.setCancelable(false);
         mHandler = new Handler();
-        AppConstants.SERVER_IP =  LoginActivity.getSavedObjectFromPreference(SplashActivity.this,"ERAM","ServerAddress",String.class);
+        AppConstants.SERVER_IP = LoginActivity.getSavedObjectFromPreference(SplashActivity.this, "ERAM", "ServerAddress", String.class);
         startCheck();
 
     }
@@ -68,8 +70,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
     }
 
     private void stopCheck() {
-
-        stoped=true;
+        stoped = true;
         mHandler.removeCallbacks(networkStatusChecker);
     }
 
@@ -78,7 +79,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
         @Override
         public void run() {
             try {
-
+                stopCheck();
                 callGetlastVersion();
                 if (!stoped)
                     mHandler.postDelayed(networkStatusChecker, mInterval);
@@ -90,6 +91,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
     };
 
     private void callGetlastVersion() {
+        stopCheck();
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         JSONObject params = new JSONObject();
         prgDialog.show();
@@ -197,7 +199,18 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
                         } else {
-                            CommonMethods.showSingleButtonAlert(SplashActivity.this, getString(R.string.txt_attention), jsonObject.getString("errmessage"), getString(R.string.pop_up_ok));
+                            CommonMethods.showSingleButtonAlert(SplashActivity.this, getString(R.string.txt_attention), jsonObject.getString("errmessage"), getString(R.string.pop_up_ok), new CommonMethods.IL() {
+                                @Override
+                                public void onSuccess() {
+                                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                                }
+
+                                @Override
+                                public void onCancel() {
+                                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                                }
+                            });
+
                         }
                     } catch (JSONException e) {
                         prgDialog.hide();
@@ -213,7 +226,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_LOGIN_VARZESH_SOFT, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(AppConstants.SERVER_IP +URL_LOGIN_VARZESH_SOFT, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -250,7 +263,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_SEND_TOKEN_WITH_DEVICE_TYPE, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SEND_TOKEN_WITH_DEVICE_TYPE, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

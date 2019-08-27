@@ -29,6 +29,7 @@ import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 import com.koohpar.eram.R;
 import com.koohpar.eram.api.IAPIConstantants;
 import com.koohpar.eram.api.IApiUrls;
+import com.koohpar.eram.tools.AppConstants;
 import com.koohpar.eram.tools.CommonMethods;
 
 import org.json.JSONArray;
@@ -68,7 +69,7 @@ public class SendMessageActivity extends AppCompatActivity implements IAPIConsta
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         prgDialog.show();
         // prepare the Request
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URL_GET_MESSAGE_TYPE, null,
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET,  AppConstants.SERVER_IP +URL_GET_MESSAGE_TYPE, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -251,7 +252,7 @@ public class SendMessageActivity extends AppCompatActivity implements IAPIConsta
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_SEND_TO_ADMIN_MESSAGE, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SEND_TO_ADMIN_MESSAGE, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

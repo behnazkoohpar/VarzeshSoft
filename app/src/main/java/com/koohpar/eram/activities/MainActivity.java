@@ -285,7 +285,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_SET_IMAGE_USER, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SET_IMAGE_USER, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -327,7 +327,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_GET_COUNT_MESSAGE_FROM_ADMIN, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_GET_COUNT_MESSAGE_FROM_ADMIN, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

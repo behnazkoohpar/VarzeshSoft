@@ -22,6 +22,7 @@ import com.koohpar.eram.activities.LoginActivity;
 import com.koohpar.eram.api.IAPIConstantants;
 import com.koohpar.eram.api.IApiUrls;
 import com.koohpar.eram.models.Reserve;
+import com.koohpar.eram.tools.AppConstants;
 import com.koohpar.eram.tools.CommonMethods;
 import com.koohpar.eram.tools.DateUtil;
 import com.koohpar.eram.tools.util.PersianCalendar;
@@ -163,7 +164,7 @@ public class ReserveListRecycleViewAdapter extends RecyclerView.Adapter<ReserveL
             }
         };
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_GET_SABT_RESERVE, params, listener, errorListener);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_GET_SABT_RESERVE, params, listener, errorListener);
         int socketTimeout = 5000; // 5 seconds. You can change it
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

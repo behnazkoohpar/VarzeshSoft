@@ -28,6 +28,7 @@ import com.koohpar.eram.R;
 import com.koohpar.eram.api.IAPIConstantants;
 import com.koohpar.eram.api.IApiUrls;
 import com.koohpar.eram.models.ERAM;
+import com.koohpar.eram.tools.AppConstants;
 import com.koohpar.eram.tools.CommonMethods;
 
 public class RecieveSmsCodeActivity extends AppCompatActivity implements Response.Listener, IApiUrls,
@@ -154,7 +155,7 @@ public class RecieveSmsCodeActivity extends AppCompatActivity implements Respons
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_CHECK_ACTIVATION_CODE, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_CHECK_ACTIVATION_CODE, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -204,7 +205,6 @@ public class RecieveSmsCodeActivity extends AppCompatActivity implements Respons
                     public void onSuccess() {
 //                        startActivity(new Intent(getApplicationContext(), UserInfoActivity.class));
                     }
-
                     @Override
                     public void onCancel() {
                         startActivity(new Intent(getApplicationContext(), LoginActivity.class));

@@ -26,6 +26,7 @@ import com.koohpar.eram.activities.ListMessageActivity;
 import com.koohpar.eram.api.IAPIConstantants;
 import com.koohpar.eram.api.IApiUrls;
 import com.koohpar.eram.models.Messages;
+import com.koohpar.eram.tools.AppConstants;
 import com.koohpar.eram.tools.CommonMethods;
 import com.koohpar.eram.tools.DateUtil;
 
@@ -140,7 +141,7 @@ public class MessageListRecycleViewAdapter extends RecyclerView.Adapter<MessageL
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_SEEN_MESSAGE, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SEEN_MESSAGE, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

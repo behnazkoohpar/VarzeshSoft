@@ -30,6 +30,7 @@ import com.koohpar.eram.models.CashService;
 import com.koohpar.eram.models.OrganizationUnit;
 import com.koohpar.eram.recycleViewAdapters.CashServiceListRecycleViewAdapter;
 import com.koohpar.eram.recycleViewAdapters.OrganListAdapter;
+import com.koohpar.eram.tools.AppConstants;
 import com.koohpar.eram.tools.CommonMethods;
 
 import org.json.JSONArray;
@@ -187,7 +188,7 @@ public class CashServiceActivity extends AppCompatActivity implements View.OnCli
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_GET_ALL_SALABLE_SERVICS, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_GET_ALL_SALABLE_SERVICS, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -239,7 +240,7 @@ public class CashServiceActivity extends AppCompatActivity implements View.OnCli
             }
         };
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_GET_ORGANIZATION_UNIT, params, listener, errorListener);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_GET_ORGANIZATION_UNIT, params, listener, errorListener);
         int socketTimeout = 5000; // 5 seconds. You can change it
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

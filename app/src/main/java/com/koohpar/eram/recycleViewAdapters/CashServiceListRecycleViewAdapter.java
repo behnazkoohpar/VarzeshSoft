@@ -22,6 +22,7 @@ import com.koohpar.eram.activities.LoginActivity;
 import com.koohpar.eram.api.IAPIConstantants;
 import com.koohpar.eram.api.IApiUrls;
 import com.koohpar.eram.models.CashService;
+import com.koohpar.eram.tools.AppConstants;
 import com.koohpar.eram.tools.CommonMethods;
 import com.koohpar.eram.tools.NumberFormatter;
 
@@ -142,7 +143,7 @@ public class CashServiceListRecycleViewAdapter extends RecyclerView.Adapter<Cash
             }
         };
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_SET_PACKAGE_REGISTRATION, params, listener, errorListener);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SET_PACKAGE_REGISTRATION, params, listener, errorListener);
         int socketTimeout = 5000; // 5 seconds. You can change it
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

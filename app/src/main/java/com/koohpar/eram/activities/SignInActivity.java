@@ -28,6 +28,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 import com.koohpar.eram.R;
+import com.koohpar.eram.api.IAPIConstantants;
+import com.koohpar.eram.api.IApiUrls;
 import com.koohpar.eram.models.ERAM;
 import com.koohpar.eram.models.ServerGym;
 import com.koohpar.eram.tools.AppConstants;
@@ -40,11 +42,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.koohpar.eram.api.IAPIConstantants.REQUEST_CARD_NUMBER;
-import static com.koohpar.eram.api.IAPIConstantants.REQUEST_PHONE;
-import static com.koohpar.eram.api.IApiUrls.URL_SIGN_OUT;
 
-public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
+public class SignInActivity extends AppCompatActivity implements View.OnClickListener, IApiUrls, IAPIConstantants {
 
     public static boolean isFromForgetPass;
     private Button btnOk;
@@ -251,7 +250,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 };
 
-                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_SIGN_OUT, params, listener, errorListener);
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SIGN_OUT, params, listener, errorListener);
                 int socketTimeout = 5000; // 5 seconds. You can change it
                 RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                         DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

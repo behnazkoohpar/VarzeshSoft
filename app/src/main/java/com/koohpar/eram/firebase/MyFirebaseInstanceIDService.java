@@ -14,6 +14,7 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.koohpar.eram.activities.LoginActivity;
 import com.koohpar.eram.api.IAPIConstantants;
 import com.koohpar.eram.api.IApiUrls;
+import com.koohpar.eram.tools.AppConstants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -53,18 +54,18 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService imple
             Response.Listener<JSONObject> listener = new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
-                    Log.d("MyFirebaseInstanceIDService", refreshedToken);
+                    Log.d("MyFirebase", refreshedToken);
                 }
             };
 
             Response.ErrorListener errorListener = new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.d("MyFirebaseInstanceIDService  don't send tokenId", refreshedToken);
+                    Log.d("Firebase don't send ", refreshedToken);
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_SEND_TOKEN_WITH_DEVICE_TYPE, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SEND_TOKEN_WITH_DEVICE_TYPE, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

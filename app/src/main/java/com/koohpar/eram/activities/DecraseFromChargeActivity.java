@@ -30,6 +30,7 @@ import com.koohpar.eram.models.DecreaseFromCharge;
 import com.koohpar.eram.models.OrganizationUnit;
 import com.koohpar.eram.recycleViewAdapters.ExpandableListAdapter;
 import com.koohpar.eram.recycleViewAdapters.OrganListAdapter;
+import com.koohpar.eram.tools.AppConstants;
 import com.koohpar.eram.tools.CommonMethods;
 
 import org.json.JSONArray;
@@ -182,7 +183,7 @@ public class DecraseFromChargeActivity extends AppCompatActivity implements View
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_GET_FORMULA_FRACTION_OF_CHARGE, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_GET_FORMULA_FRACTION_OF_CHARGE, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -234,7 +235,7 @@ public class DecraseFromChargeActivity extends AppCompatActivity implements View
             }
         };
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_GET_ORGANIZATION_UNIT, params, listener, errorListener);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_GET_ORGANIZATION_UNIT, params, listener, errorListener);
         int socketTimeout = 5000; // 5 seconds. You can change it
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

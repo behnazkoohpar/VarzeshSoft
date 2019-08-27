@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.0"
+    buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.koohpar.eram"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
-        versionCode 26
-        versionName "1.26"
+        versionCode 27
+        versionName "1.27"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -21,6 +21,12 @@ android {
             renderscriptDebuggable false
             pseudoLocalesEnabled false
         }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
     allprojects {
         repositories {
@@ -41,17 +47,17 @@ dependencies {
     //        exclude group: 'xpp3', module: 'xpp3'
     //    }
     //noinspection GradleCompatible
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-    implementation 'com.google.android.material:material:1.0.0-beta01'
-    implementation 'com.github.aakira:expandable-layout:1.5.1@aar'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
-    implementation 'androidx.cardview:cardview:1.0.0-beta01'
-    implementation 'org.apache.httpcomponents:httpcore:4.1'
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta03'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.10'
     implementation 'com.android.volley:volley:1.1.0'
-    implementation 'com.google.code.gson:gson:2.8.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
-    implementation 'de.hdodenhof:circleimageview:2.0.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 //    compile 'com.google.firebase:firebase-core:10.0.1'
     //noinspection GradleCompatible
     implementation 'com.google.android.gms:play-services-maps:10.0.1'
@@ -64,7 +70,7 @@ dependencies {
     implementation 'com.google.zxing:core:3.2.1'
     implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
-    implementation 'com.github.aakira:expandable-layout:1.5.1@aar'
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
     implementation "me.leolin:ShortcutBadger:1.1.21@aar"
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
 }
