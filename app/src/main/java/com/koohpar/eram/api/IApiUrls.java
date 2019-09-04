@@ -8,12 +8,10 @@ import static com.koohpar.eram.tools.AppConstants.SERVER_IP;
  * Created by Behnaz on 06/03/2017.
  */
 public interface IApiUrls {
-
-     String SERVER = "http://5.202.192.146:4000/";
 //    String SERVER_IP = "http://192.168.1.52:4000/";
 //    String SERVER_IP = "http://192.168.43.39:3000/";
     String URL_SIGN_OUT = "/sign_out";
-    String URL_GET_LAST_VERSION = SERVER + "get_last_version";
+    String URL_GET_LAST_VERSION =  "/get_last_version";
 
     String URL_CHECK_ACTIVATION_CODE = "/check_activation_code";
     String URL_FORGET_PASSWORD = "/forget_password";

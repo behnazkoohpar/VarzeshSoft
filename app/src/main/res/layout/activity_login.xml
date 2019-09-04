@@ -83,6 +83,7 @@
             android:layout_marginRight="40dp"
             app:ael_duration="400"
             app:ael_expanded="false"
+            android:layout_centerHorizontal="true"
             app:ael_interpolator="accelerate"
             app:ael_orientation="vertical">
 
@@ -91,6 +92,7 @@
                 android:layout_height="match_parent"
                 android:background="#ffffff"
                 android:elevation="2dp"
+                android:layout_centerHorizontal="true"
                 android:orientation="horizontal">
 
                 <ListView
@@ -99,6 +101,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:choiceMode="singleChoice"
+                    android:layout_centerHorizontal="true"
                     android:divider="#FF0033"
                     android:dividerHeight="1dp"
                     android:headerDividersEnabled="true"

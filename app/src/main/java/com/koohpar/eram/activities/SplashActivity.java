@@ -26,6 +26,8 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.RequestQueue;
@@ -38,9 +40,11 @@ import com.koohpar.eram.BuildConfig;
 import com.koohpar.eram.api.IAPIConstantants;
 import com.koohpar.eram.api.IApiUrls;
 import com.koohpar.eram.models.ERAM;
+import com.koohpar.eram.models.ServerGym;
 import com.koohpar.eram.tools.AppConstants;
 import com.koohpar.eram.tools.CommonMethods;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -105,24 +109,31 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
                     JSONObject jsonObject = response;
                     PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
                     final int version = pInfo.versionCode;
-                    if (!jsonObject.getString("AndroidVersion").isEmpty() && jsonObject.getInt("AndroidVersion") > version) {
-                        invokeVersion(jsonObject.getString("AndroidFilePath"));
-                    } else {
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (LoginActivity.getSavedObjectFromPreference(getApplicationContext(), "ERAM", "PassWord", String.class) == null ||
-                                        LoginActivity.getSavedObjectFromPreference(getApplicationContext(), "ERAM", "PhoneNumber", String.class) == null ||
-                                        LoginActivity.getSavedObjectFromPreference(getApplicationContext(), "ERAM", "PassWord", String.class).equalsIgnoreCase("") ||
-                                        LoginActivity.getSavedObjectFromPreference(getApplicationContext(), "ERAM", "PhoneNumber", String.class).equalsIgnoreCase("")) {
-                                    Intent intent = new Intent(SplashActivity.this,
-                                            LoginActivity.class);
-                                    startActivity(intent);
-                                } else {
-                                    callLogin();
+                    Log.d("Response", response.toString());
+                    JSONObject settings = jsonObject.getJSONObject("settings");
+                    JSONArray data = jsonObject.getJSONArray("data");
+                    if (settings.getString("success").equalsIgnoreCase("1")) {
+                        JSONObject jsonObject1 = (JSONObject) data.get(0);
+
+                        if (!jsonObject1.getString("VersionNumber").isEmpty() && jsonObject1.getInt("VersionNumber") > version) {
+                            invokeVersion(jsonObject.getString("Address"));
+                        } else {
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    if (LoginActivity.getSavedObjectFromPreference(getApplicationContext(), "ERAM", "PassWord", String.class) == null ||
+                                            LoginActivity.getSavedObjectFromPreference(getApplicationContext(), "ERAM", "PhoneNumber", String.class) == null ||
+                                            LoginActivity.getSavedObjectFromPreference(getApplicationContext(), "ERAM", "PassWord", String.class).equalsIgnoreCase("") ||
+                                            LoginActivity.getSavedObjectFromPreference(getApplicationContext(), "ERAM", "PhoneNumber", String.class).equalsIgnoreCase("")) {
+                                        Intent intent = new Intent(SplashActivity.this,
+                                                LoginActivity.class);
+                                        startActivity(intent);
+                                    } else {
+                                        callLogin();
+                                    }
                                 }
-                            }
-                        }, 7300);
+                            }, 7300);
+                        }
                     }
                 } catch (JSONException e) {
                     Toast.makeText(SplashActivity.this, R.string.lost_internet, Toast.LENGTH_LONG).show();
@@ -143,7 +154,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
             }
         };
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(URL_GET_LAST_VERSION, params, listener, errorListener);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest("http://94.182.183.196:8000/WS" + URL_GET_LAST_VERSION, params, listener, errorListener);
         int socketTimeout = 5000; // 5 seconds. You can change it
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -226,7 +237,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(AppConstants.SERVER_IP +URL_LOGIN_VARZESH_SOFT, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(AppConstants.SERVER_IP + URL_LOGIN_VARZESH_SOFT, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -263,7 +274,7 @@ public class SplashActivity extends AppCompatActivity implements IAPIConstantant
                 }
             };
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( AppConstants.SERVER_IP +URL_SEND_TOKEN_WITH_DEVICE_TYPE, params, listener, errorListener);
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(AppConstants.SERVER_IP + URL_SEND_TOKEN_WITH_DEVICE_TYPE, params, listener, errorListener);
             int socketTimeout = 5000; // 5 seconds. You can change it
             RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

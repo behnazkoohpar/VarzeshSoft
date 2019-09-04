@@ -125,7 +125,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     private void callGetServer() {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        final String url = "http://185.187.51.207:8000/WS/get_company_info";
+        final String url = "http://94.182.183.196:8000/WS/get_company_info";
 
 // prepare the Request
         JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, url, null,
